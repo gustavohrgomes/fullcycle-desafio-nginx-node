@@ -9,6 +9,7 @@ services:
     tty: true
     volumes:
       - ./node:/app
+      - node-modules:/app
     networks:
       - nodenet
     depends_on:
@@ -39,3 +40,6 @@ services:
 networks:
   nodenet:
     driver: bridge
+
+volumes:
+  node-modules:
